@@ -1,57 +1,69 @@
-☕️ 咖啡因真的能提升工作效率？我用 Power BI 打造「咖啡與專注力」數據分析儀表板
-前言：身為一名經常需要高效輸出的工作者，「再來一杯咖啡」往往是面對下午低潮的直覺反應。然而，咖啡因攝取與專注度之間的關係真的是「喝越多、越專注」嗎？為了驗證這個假說，我收集了個人的每日咖啡因攝取量、睡眠時數與專注度評分，並使用 Power BI 建置了一套視覺化儀表板，深入探索數據背後的真相。
+☕️ Does Caffeine Really Boost Productivity? Building a "Caffeine & Focus" Analytics Dashboard in Power BI
 
-📌 專案摘要與核心疑問
-本專案旨在透過數據探索以下三個核心問題：
+Introduction:
+As someone who frequently needs to deliver high-output work, grabbing "one more cup of coffee" is often my instinctive reaction to an afternoon slump. However, is the relationship between caffeine intake and focus truly linear—the more you drink, the more focused you become? To test this hypothesis, I tracked my daily caffeine intake, sleep hours, and focus scores, and built an interactive Power BI dashboard to uncover the truth behind the data.
 
-1.時間趨勢：一天當中，專注度高低是否存在特定的時間規律？
+📌 Project Summary & Core Questions
+This project aims to explore three core questions through data:
 
-2.劑量反應：咖啡因攝取量與專注度之間是線性提升，還是存在最佳臨界值？
+Time Trends: Do focus levels follow a specific circadian pattern throughout the day?
 
-3. 飲品效益：美式、拿鐵、濃縮咖啡或綠茶，哪種飲品帶來的專注效益最高？
+Dose-Response: Does focus scale linearly with caffeine intake, or is there an optimal threshold?
 
-📊 儀表板架構與數據洞察
+Beverage Efficacy: Among Americano, Latte, Espresso, and Green Tea, which drink delivers the highest focus performance?
 
+📊 Dashboard Architecture & Data Insights
+1. Core KPIs: Tracking Baseline Health & Total Intake
+At the top of the dashboard, I placed two core KPI cards to establish a baseline for my overall condition:
 
-1. KPI 關鍵指標：掌握基礎健康與攝取總量
-在儀表板頂部，我設置了兩張核心 KPI 卡片，作為評估整體狀態的基準：
+Average Daily Sleep Hours: Monitors whether my foundational physiological rest is sufficient.
 
-每日平均睡眠時間：觀察底層生理休息是否充足。
+Average Daily Caffeine Intake: Tracks total daily concentration to prevent over-reliance.
 
-每日平均咖啡因攝取量：監控每日總攝取濃度，避免過量依賴。
+💡 Key Finding: When average daily sleep stays at a healthy level, caffeine's cognitive boost increases significantly. Conversely, when sleep-deprived, blindly increasing caffeine intake fails to proportionally raise focus scores.
 
-💡 關鍵發現：當每日平均睡眠時間維持在良好水準時，咖啡因的輔助效果顯著提升；反之，若睡眠不足，盲目增加咖啡因攝取並無法等比例拉高專注分數。
-2. 時間趨勢分析：證實「生理低潮期」的存在
+2. Time Trend Analysis: Confirming the "Circadian Slump"
+Analyzing focus across time blocks (Morning → Late Morning → Afternoon → Late Afternoon) via a line chart revealed a classic physiological curve:
 
-透過時間區段（Morning → Late Morning → Afternoon → Late Afternoon）的折線圖分析，數據呈現出非常標準的生理曲線：
+Morning to Late Morning (09:00–12:00): Focus remains steadily high between 7.0 and 7.3.
 
-早晨至前中午 (09:00–12:00)：專注度維持在 7.0–7.3 的穩定高檔。
-午後低潮 (13:00–16:00)：出現顯著的「Post-lunch dip」，專注分數降至全天最低點（約 6.4/10）。
-傍晚反彈 (16:00 之後)：專注度大幅回升，達到全天最高峰（接近 7.8/10）。
-3. 散佈圖探索：咖啡因與專注力的「倒 U 型關係」
+Afternoon Slump (13:00–16:00): A pronounced "post-lunch dip" occurs, dropping focus to its lowest point of the day (~6.4 / 10).
 
-將每一筆攝取紀錄拆解至散佈圖後，證實了心理學中的 Yerkes-Dodson 法律（適度焦慮/刺激能帶來最佳表現）：
+Late Afternoon Rebound (After 16:00): Focus surges back up, reaching the highest peak of the day (nearly 7.8 / 10).
 
-黃金區間 (50 ~ 75 mg)：專注度分數普遍落在 8 分以上的最高峰。
-過量邊際效益遞減 (> 80 mg)：當單次攝取過高時，專注分數反而下滑，伴隨的是坐立難安與焦慮感。
-4. 飲品類型比較：哪種咖啡因載體效果最好？
+3. Scatter Plot Exploration: The "Inverted-U" Relationship
+Plotting individual intake records on a scatter plot confirmed the psychological Yerkes-Dodson Law (moderate stimulation yields peak performance):
 
-不同飲品的平均專注表現：
+The Golden Zone (50–75 mg): Focus scores consistently peak above 8.0.
 
-🥇 美式咖啡 (Americano)：以 7.30 分拿下最佳專注效益。
-🥈 綠茶 (Green Tea)：以 7.25 分緊追在後，證明溫和且含 L-茶氨酸的茶類也是優質選擇。
-🥉 無攝取 (None)：維持在 7.00 分的平穩水準。
-📉 濃縮咖啡 (Espresso)：僅獲得 6.17 分，再度驗證短時間內衝高咖啡因濃度容易適得其反。
-💡 商業與個人最佳化建議（Actionable Insights）
-根據這套儀表板的數據分析結果，我為自己制定了以下三條「高專注咖啡因策略」：
+Diminishing Returns (> 80 mg): When a single dose is too high, focus scores actually drop, accompanied by restlessness and anxiety.
 
-實施「微劑量策略」：將單次攝取控制在 50~75 mg 之間（例如一杯中杯美式或綠茶），避免為了提神而選擇高濃度的 Espresso。
-2. 精準對抗下午低潮：避開早晨剛醒咖啡因效益較低的時段，改在下午 13:00–14:00 低潮期來臨前進行輕量補充，協助順利渡過午後低谷。
+4. Beverage Comparison: Which Caffeine Carrier Works Best?
+Average focus performance across different drink types:
 
-3. 動態場景管理：透過儀表板中的 Day_Type 切片器，可以進一步區分「工作日 vs. 週末」的生理需求，在週末適度降低攝取，維持身體對咖啡因的敏感度。
+🥇 Americano: Ranked first with the highest focus score at 7.30.
 
-🛠️ 本專案使用的 Power BI 技術範疇
-資料清洗與排序：使用自訂 Time_Period_Order 欄位搭配 Sort by Column 解決時間軸文字排序邏輯。
-動態數據建模：運用 DAX 計算平均數與比例指標，並透過切片器 (Slicer) 實現全頁面圖表連動。
-資訊架構設計：結合 KPI 卡片、時間序列折線圖、散佈圖與群組柱狀圖，建構具備故事性的 Data Storytelling 畫面。
-結語：數據分析最迷人的地方，在於將直覺與假設轉化為可被驗證的具體洞察。這份作品不僅協助我優化了日常工作狀態，也是一套完整的 Power BI 實作練習。如果你對這個專案的建模方式或 DAX 寫法有興趣，歡迎在下方留言交流！
+🥈 Green Tea: Followed closely at 7.25, proving that milder teas containing L-theanine are also an excellent option.
+
+🥉 None (No Caffeine): Maintained a steady baseline of 7.00.
+
+📉 Espresso: Scored only 6.17, reinforcing that spiking caffeine concentration rapidly often backfires.
+
+💡 Actionable Insights & Personal Optimization Strategy
+Based on the findings from this dashboard, I established three "High-Focus Caffeine Rules" for myself:
+
+Adopt a "Micro-Dosing" Strategy: Keep single intakes within the 50–75 mg range (such as a medium Americano or Green Tea), avoiding high-concentration Espresso shots for a quick pick-me-up.
+
+Target the Afternoon Slump Precisely: Skip caffeine right after waking up when its effectiveness is lower, and instead take a light dose around 13:00–14:00 just before the afternoon dip hits to smooth out the trough.
+
+Dynamic Scenario Management: Using the Day_Type slicer on the dashboard to separate Workdays vs. Weekends, I deliberately scale back intake on weekends to preserve my body's sensitivity to caffeine.
+
+🛠️ Power BI Technical Stack Used
+Data Cleaning & Custom Sorting: Created a custom Time_Period_Order column paired with Sort by Column to fix chronological text sorting on the time axis.
+
+Dynamic Data Modeling: Used DAX to calculate averages and ratio metrics, paired with Slicers for full-page cross-filtering.
+
+Information Architecture: Combined KPI cards, time-series line charts, scatter plots, and clustered column charts to create a cohesive Data Storytelling layout.
+
+Conclusion:
+The most fascinating part of data analysis is turning intuition and assumptions into verifiable, concrete insights. Not only did this project help me optimize my daily work performance, but it also served as a complete end-to-end Power BI practice build. If you're interested in the data modeling approach or DAX formulas behind this project, feel free to leave a comment below and connect!
